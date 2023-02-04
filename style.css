@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+.container {
+  height: 120vh;
+  background-image: radial-gradient(
+    farthest-side at 50% 0%,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.header {
+  border-style: solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+  max-width: 700px;
+  width: 60%;
+  padding: 20px;
+  margin-bottom: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.289199);
+  border-radius: 5px;
+  margin-top: 48px;
+}
+.score-div {
+  border-radius: 5px;
+  height: 100%;
+  width: 25%;
+  max-width: 150px;
+  background-color: aliceblue;
+  text-align: center;
+  padding: 10px;
+}
+.score-title {
+  color: hsl(229, 64%, 46%);
+  font-size: 1rem;
+  font-weight: 600;
+}
+.score-value {
+  color: hsl(229, 25%, 31%);
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.game-container {
+  height: fit-content;
+  width: fit-content;
+}
+.choice-phase {
+  background-image: url(/images/bg-pentagon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: grid;
+  grid-template: 100px repeat(2, 1fr) / repeat(4, 1fr);
+  height: 400px;
+  width: 400px;
+}
+.button {
+  background: transparent;
+  padding: 0.5rem;
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 15px solid transparent;
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: inset 0 -6px  rgba(0, 0, 0, 0.2)  ;
+
+}
+.scissors {
+  background-image: linear-gradient(0deg, #f3f3f3 0%, #dadada 98.34%),
+    linear-gradient(90deg, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  grid-area: 1/ 2 / span 1 / span 2;
+  align-self: center;
+  justify-self: center;
+}
+.paper {
+  background-image: linear-gradient(0deg, #f3f3f3 0%, #dadada 98.34%),
+    linear-gradient(90deg, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  grid-area: 2/ 4 / span 1 / span 1;
+}
+.rock {
+  background-image: linear-gradient(0deg, #f3f3f3 0%, #dadada 98.34%),
+    linear-gradient(90deg, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  grid-area: 3/ 3 / span 1 / span 2;
+  justify-self: center;
+  align-self: flex-end;
+}
+.lizzard {
+  background-image: linear-gradient(0deg, #f3f3f3 0%, #dadada 98.34%),
+    linear-gradient(90deg, hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+  grid-area: 3/ 1 / span 1 / span 2;
+  align-self: flex-end;
+  justify-self: center;
+}
+.spock {
+  background-image: linear-gradient(0deg, #f3f3f3 0%, #dadada 98.34%),
+    linear-gradient(90deg, hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+  grid-area: 2/ 1 / span 1 / span 1;
+}
+.icon {
+  scale: 80%;
+}
+.rules {
+  background: transparent;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  border-color: #fff;
+  color: #fff;
+  padding: 10px;
+  align-self: flex-end;
+  margin-right: 30px;
+  width: 128px;
+  text-align: center;
+}
+.resualt-phase {
+  display: flex;
+  min-width: 750px;
+  height: 40%;
+  min-height: 400px;
+  gap: 150px;
+  justify-content: center;
+}
+.player-div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  gap: 135px;
+  width: 200px;
+}
+.resault-div {
+  align-self: center;
+}
+.resault {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 67px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+}
+#reset {
+  width: 220px;
+  height: 48px;
+  background: linear-gradient(0deg, #f3f3f3 0%, #ffffff 100%);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+  border-radius: 8px;
+  color: #3b4262;
+}
+.house-div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  gap: 135px;
+  width: 200px;
+}
+.loading {
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  align-self: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  scale: 150%;
+}
+.hidden {
+  display: none;
+}
+.scale-up {
+  scale: 200%;
+}
+.winner {
+  align-self: center;
+/* enter css here..... */
+}
+@media screen and (max-width:600px) {
+  .rules {
+    align-self: inherit;
+    justify-self: flex-end;
+  }
+  .resualt-phase {
+    flex-wrap: wrap;
+  }
+  .resault-div {
+    order: 1;
+  }
+  .scale-up {
+    scale: 150%;
+  }
+  .player-div {
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+  .house-div {
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+  .header {
+    max-width: 311px;
+    height: 96px;
+    padding: 8px;
+    margin-top: 32px;
+  }
+  .game {
+    scale: 50%;
+    justify-self: flex-start;
+  }
+  .score-value {
+    font-size: 40px;
+  }
+  .score-title {
+    font-size: 10px;
+  }
+  .score-div {
+    width: 80px;
+    height: 72px;
+  }
+  .choice-phase {
+    width: 300px;
+    height: 300px;
+    grid-template: 50px repeat(2, 1fr) / repeat(4, 1fr);
+    background-size: 80%;
+  }
+  .button {
+    width: 100px;
+    height: 100px;
+  }
+  .icon {
+    scale: 70%
+  }
+  .rules {
+    margin-right: 0px;
+  }
+  .pick {
+    font-size: 15px;
+  }
+  .resualt-phase {
+    min-width: 300px;
+    justify-content: center;
+    gap: 50px;
+  }
+}
